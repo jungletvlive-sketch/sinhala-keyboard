@@ -8,7 +8,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: unzip -q *.zip
-      - run: ls
+      - run: ls      
+      - run: echo "android.useAndroidX=true" > sinhala-keyboard/gradle.properties
       - uses: actions/setup-java@v4
         with:
           distribution: temurin
